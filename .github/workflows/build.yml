@@ -52,7 +52,7 @@ jobs:
           ARM32_CROSS_COMPILE: arm-none-eabi-
           BUILD_JOBS: 4
           AIROHA_SIGN_KEY: ${{ secrets.AIROHA_SIGN_KEY }}
-        run: ./scripts/build-an758x.sh "${{ matrix.target }}"
+        run: sh ./scripts/build-an758x.sh "${{ matrix.target }}"
 
       - name: Upload ${{ matrix.target }}
         uses: actions/upload-artifact@v4
